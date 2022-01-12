@@ -9,15 +9,20 @@
 	</parent>
 	<artifactId>emaillist01</artifactId>
 	<packaging>war</packaging>
-	
+
 	<properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 		<project.reporting.outputEncodnig>utf-8</project.reporting.outputEncodnig>
-	</properties>	
-	
+	</properties>
+
 	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.17</version>
+		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>emaillist01</finalName>
 		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
@@ -57,5 +62,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>	
+	</build>
 </project>
