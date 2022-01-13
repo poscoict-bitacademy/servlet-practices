@@ -1,4 +1,4 @@
-package com.douzone.guestbook.dao.test;
+package com.poscoict.guestbook.dao.test;
 
 public class GuestbookDaoTest {
 

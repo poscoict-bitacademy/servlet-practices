@@ -1,4 +1,4 @@
-package com.douzone.guestbook.dao;
+package com.poscoict.guestbook.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.douzone.guestbook.vo.GuestbookVo;
+import com.poscoict.guestbook.vo.GuestbookVo;
 
 public class GuestbookDao {
 	public List<GuestbookVo> findAll() {
@@ -146,8 +146,8 @@ public class GuestbookDao {
 	private Connection getConnection() throws SQLException {
 		Connection conn = null;
 		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-			String url = "jdbc:mysql://127.0.0.1:3306/webdb?characterEncoding=utf8";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/webdb?characterEncoding=UTF-8&serverTimezone=UTC";
 			conn = DriverManager.getConnection(url, "webdb", "webdb");
 		} catch (ClassNotFoundException e) {
 			System.out.println("드라이버 로딩 실패:" + e);
