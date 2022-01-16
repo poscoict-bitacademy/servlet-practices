@@ -3,7 +3,7 @@
 <%@page import="com.poscoict.guestbook.vo.GuestbookVo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-List<GuestbookVo> list = new GuestbookDao().findAll();
+	List<GuestbookVo> list = (List<GuestbookVo>)request.getAttribute("list");
 %>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,8 @@ List<GuestbookVo> list = new GuestbookDao().findAll();
 <title>방명록</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath() %>/add.jsp" method="post">
+	<form action="<%=request.getContextPath() %>/gb" method="post">
+		<input type="hidden" name="a" value="add">
 		<table border=1 width=500>
 			<tr>
 				<td>이름</td><td><input type="text" name="name"></td>
@@ -38,7 +39,7 @@ List<GuestbookVo> list = new GuestbookDao().findAll();
 				<td>[<%=count-index++ %>]</td>
 				<td><%=vo.getName() %></td>
 				<td><%=vo.getRegDate() %></td>
-				<td><a href="<%=request.getContextPath() %>/deleteform.jsp?no=<%=vo.getNo() %>">삭제</a></td>
+				<td><a href="<%=request.getContextPath() %>/gb?a=deleteform&no=<%=vo.getNo() %>">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan=4><%=vo.getMessage().replaceAll("\n", "<br/>") %></td>
