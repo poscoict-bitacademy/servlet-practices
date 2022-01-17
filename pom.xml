@@ -6,11 +6,13 @@
 	<artifactId>servlet-practices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	
 	<modules>
 		<module>helloweb</module>
 		<module>emaillist01</module>
 		<module>guestbook01</module>
 		<module>emaillist02</module>
 		<module>guestbook02</module>
+		<module>jstlel</module>
 	</modules>
 </project>
