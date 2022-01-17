@@ -19,4 +19,24 @@
     <servlet-name>_01Servlet</servlet-name>
     <url-pattern>/01</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>_02Servlet</display-name>
+    <servlet-name>_02Servlet</servlet-name>
+    <servlet-class>jstlel._02Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>_02Servlet</servlet-name>
+    <url-pattern>/02</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>_03Servlet</display-name>
+    <servlet-name>_03Servlet</servlet-name>
+    <servlet-class>jstlel._03Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>_03Servlet</servlet-name>
+    <url-pattern>/03</url-pattern>
+  </servlet-mapping>
 </web-app>
